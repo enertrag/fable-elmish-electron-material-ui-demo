@@ -15,8 +15,8 @@ DarkModeWorkaround.init ()
 let createMainWindow () =
   let mainWinState =
     WindowState.getState(jsOptions<WindowState.Options>(fun o ->
-      o.defaultHeight <- 600
-      o.defaultWidth <- 800
+      o.defaultHeight <- 100
+      o.defaultWidth <- 60
     ))
 
   let win =
