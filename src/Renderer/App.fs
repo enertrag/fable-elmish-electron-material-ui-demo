@@ -11,7 +11,7 @@ type Message =
     | Double
     | Half
 
-let init (): Model = 0
+let init () = 0
 
 let view (model: Model) (dispatch: Message -> unit) =
     let buttons =
@@ -27,7 +27,7 @@ let view (model: Model) (dispatch: Message -> unit) =
     let counter = div [] [ model.ToString() |> str ]
     div [] (counter :: buttons)
 
-let update (message: Message) (model: Model): Model =
+let update (message: Message) (model: Model) =
     match message with
     | Decrement -> model - 1
     | Increment -> model + 1
